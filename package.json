@@ -9,7 +9,7 @@
   "dependencies": {
     "@hono/node-server": "^1.18.1",
     "@libsql/client": "^0.15.10",
-    "@mtcute/node": "^0.25.7",
+    "@mtcute/node": "^0.25.8",
     "dotenv": "^17.2.1",
     "hono": "^4.9.0"
   },
