@@ -26,3 +26,8 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+bun.lock
+package-lock.json
+client.session
+client.session-shm
+client.session-wal

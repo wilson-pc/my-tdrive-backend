@@ -6,25 +6,17 @@ import "dotenv/config";
 import fileRouter from "./controller/file.controller.js";
 const app = new Hono();
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
-
-app.use(
-  cors({
+app.use(cors({
     origin: ["http://localhost:5173", "https://mytdrive.hibapp.com"],
-  })
-);
-
+}));
 app.get("/", (c) => {
-  return c.text("Hello Hono!");
+    return c.text("Hello Hono!");
 });
-
 app.route("/auth", authRouter);
 app.route("/file", fileRouter);
-serve(
-  {
+serve({
     fetch: app.fetch,
     port: PORT,
-  },
-  (info) => {
+}, (info) => {
     console.log(`Server is running on http://localhost:${info.port}`);
-  }
-);
+});
